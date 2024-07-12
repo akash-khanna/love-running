@@ -88,6 +88,8 @@ main {
     background-color: #4ecdc4;
     /* Make main element take up surplus space to push footer down */
     flex: 1 0 auto;
+    /* i dont like this, it's not fully responsive */
+    margin-top: 47px;
 }
 
 /* footer  */
