@@ -26,6 +26,9 @@ header {
     width: 100%;
     /* original: 0 2px 2px #3a3a3a */
     box-shadow: 0 2px 2px #878787;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a {
@@ -57,13 +60,27 @@ h1 {
 
 /* navbar styles with dropdown toggle */
 nav {
-    position:absolute;
-    background-color:#f7fff7;
-    width:100%;
-    left:0;
+    position: absolute;
+    background-color: #f7fff7;
+    width: 100%;
+    left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #878787;
-    display:none;
+    display: none;
+    top: 100%;
+}
+
+/* nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
 }
 
 /* main */
