@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* generic project styles - color pallete: #292f36 blackish, #4ecdc4 bluish, #f7fff7 whitish, #ff6b6b reddish, #ffe66d yellowish*/
+    /* generic project styles */
     color: #292f36;
     font-family: 'Lato', sans-serif;
 }
@@ -45,8 +45,8 @@ h1 {
 
 #menu {
     list-style-type: none;
+    /* this was 4px in the walkthrough */
     letter-spacing: 2px;
-    /* this was 4px in the walkthrough, but i like it with 2px */
     font-size: 110%;
 }
 
@@ -86,6 +86,7 @@ nav {
 /* main */
 main {
     background-color: #4ecdc4;
+    /* background-color: antiquewhite; */
     /* Make main element take up surplus space to push footer down */
     flex: 1 0 auto;
     /* i dont like this, it's not fully responsive */
@@ -97,4 +98,25 @@ footer {
     background-color: #ffe66d;
     /* used my own color pallet */
     text-align: center;
+} 
+
+
+/* media query: for tables and larger, 768px and up */
+@media screen and (min-width: 768px) {
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content; 
+    }
+    #menu {
+        display: flex;
+
+    }
+    #menu > li {
+        padding-left: 1rem;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
 }
