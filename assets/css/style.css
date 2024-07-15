@@ -13,7 +13,8 @@ body {
     display: flex;
     flex-direction: column;
     /* generic project styles */
-    color: #292f36;
+    /* color: #292f36; */
+    color: indigo;
     font-family: 'Lato', sans-serif;
 }
 
@@ -24,7 +25,6 @@ header {
     position: fixed;
     z-index: 99;
     width: 100%;
-    /* original: 0 2px 2px #3a3a3a */
     box-shadow: 0 2px 2px #878787;
     display: flex;
     justify-content: space-between;
@@ -40,12 +40,10 @@ h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #292f36;
 }
 
 #menu {
     list-style-type: none;
-    /* this was 4px in the walkthrough */
     letter-spacing: 2px;
     font-size: 110%;
 }
@@ -55,7 +53,7 @@ h1 {
 }
 
 .active {
-    border-bottom: 1px solid #292f36;
+    border-bottom: 1px solid indigo;
 }
 
 /* navbar styles with dropdown toggle */
@@ -81,25 +79,40 @@ nav {
 
 .nav-toggle-label {
     font-size: 2rem;
+    align-self: center;
 }
 
 /* main */
 main {
     background-color: #4ecdc4;
-    /* background-color: antiquewhite; */
     /* Make main element take up surplus space to push footer down */
     flex: 1 0 auto;
-    /* i dont like this, it's not fully responsive */
     margin-top: 47px;
 }
 
 /* footer  */
 footer {
+    /* own colour choice */
     background-color: #ffe66d;
-    /* used my own color pallet */
-    text-align: center;
-} 
+    width: 100%;
+}
 
+#social {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#social a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#social li {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+}
 
 /* media query: for tables and larger, 768px and up */
 @media screen and (min-width: 768px) {
@@ -107,15 +120,18 @@ footer {
         display: block;
         position: relative;
         box-shadow: none;
-        width: fit-content; 
+        width: fit-content;
     }
+
     #menu {
         display: flex;
 
     }
-    #menu > li {
+
+    #menu>li {
         padding-left: 1rem;
     }
+
     .nav-toggle-label {
         display: none;
     }
@@ -128,5 +144,11 @@ footer {
 
     main {
         margin-top: 79px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid indigo;
     }
 }
