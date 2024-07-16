@@ -254,7 +254,7 @@ footer {
         flex-direction: row;
     }
 
-    #benifits > div {
+    #benifits>div {
         flex: 1;
     }
 
@@ -266,11 +266,11 @@ footer {
         order: 1;
     }
 
-    #benifits-mental > div {
+    #benifits-mental>div {
         align-self: flex-start;
     }
 
-    #benifits-physical > div {
+    #benifits-physical>div {
         align-self: flex-end;
     }
 }
