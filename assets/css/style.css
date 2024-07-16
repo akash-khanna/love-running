@@ -95,6 +95,8 @@ main {
     flex: 1 0 auto;
     margin-top: 47px;
     background-color: rgb(255, 250, 230);
+    display: flex;
+    flex-direction: column;
 }
 
 /* hero section */
@@ -182,6 +184,15 @@ main {
     border: 2px solid rgb(255, 250, 230);
 }
 
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
+}
+
 /* footer  */
 footer {
     /* own colour choice */
@@ -204,6 +215,57 @@ footer {
 #social li {
     margin: 1.5rem 0;
     font-size: 1.5rem;
+}
+
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+#signup-form {
+    color: rgb(255, 250, 230);
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#signup-form>h2 {
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: rgb(255, 250, 230);
+    border: 1px solid rgb(255, 250, 230);
+    border-radius: 2px;
+    width: 100%;
+    margin: 5px 0 20px 0;
+    height: 25px;
+    padding: 0 5px;
+}
+
+#radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: rgb(255, 250, 230);
+}
+
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* media query: for tables and larger, 768px and up */
@@ -262,11 +324,42 @@ footer {
         text-align: end;
         align-self: flex-end;
     }
+
+    #photos {
+        column-count: 3;
+        column-gap: 0;
+    }
+
+    #signup {
+        background-position :center;
+        position: relative;
+    }
+
+    #signup-form {
+        position:absolute;
+        left:10%;
+        top:150px;
+        max-width: 400px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: rgb(60, 65, 41);
+        color: #454b1b;
+    }
 }
 
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid indigo;
+    }
+
+    #photos {
+        column-count: 4;
+        column-gap: 0;
     }
 }
 
